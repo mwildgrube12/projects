@@ -89,12 +89,10 @@ body {
 }
 
 .content {
-margin-left: 200px; S
-width: calc(100% - 150px);
-min-height: 100vh; /* fills at least the full screen */
-padding: 220px 20px 20px; 
-position: relative;
-background-color: white;
+    margin-left: 200px; 
+    padding: 220px 220px 220px; 
+    position: relative;
+    background-color: white;
 }
 
 .content p{
@@ -113,12 +111,4 @@ background-color: white;
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #ff9800;
-}
-h1 {
-    margin: 0 0 1rem 0;
-    font-size: 2rem;
-    }
-p {
-    margin: 0;
-    color: #666;
 }

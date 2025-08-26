@@ -89,7 +89,7 @@ body {
 }
 
 .content {
-margin-left: 200px; 
+margin-left: 200px; S
 width: calc(100% - 150px);
 min-height: 100vh; /* fills at least the full screen */
 padding: 220px 20px 20px; 
@@ -97,6 +97,11 @@ position: relative;
 background-color: white;
 }
 
+.content p{
+    color: black;
+    text-decoration: none;
+    size: 15pt;
+}
 
 .container {
     text-align: center;

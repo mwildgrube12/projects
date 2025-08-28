@@ -101,6 +101,33 @@ body {
     size: 15pt;
 }
 
+.responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.gallery{
+    background-color: #B0E0E6;
+    border: 1px solid gray
+}
+
+div.gallery:hover {
+  border: 1px solid black;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/*redo later*/
 .container {
     text-align: center;
     padding: 2rem;

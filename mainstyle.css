@@ -89,8 +89,8 @@ body {
 }
 
 .content {
-    margin-left: 200px; 
-    padding: 220px 220px 220px; 
+    margin-left: 100px; 
+    padding: 100px 100px 220px; 
     position: relative;
     background-color: white;
 }
@@ -103,6 +103,7 @@ body {
 
 .responsive {
     width: 100%;
+    max-width: 1000px;
     height: auto;
     border-radius: 8px;
 }

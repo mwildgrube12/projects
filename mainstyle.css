@@ -85,7 +85,7 @@ body {
 
 .content {
     margin-left: 400px; 
-    padding: 200px 50px 200px 50px; 
+    padding: 200px 50px 0 50px; 
     position: relative;
     background-color: white;
     translate: -200px 0;
@@ -110,6 +110,8 @@ body {
     height: auto;
     border-radius: 8px;
 }
+
+
 
 .responsive2 {
     width: 100%;
@@ -145,15 +147,8 @@ div.gallery:hover {
 }
 
 
-/*redo later*/
-.container {
+
+.footer {
     text-align: center;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-}
-.icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #ff9800;
+    padding: 50px 0 20px 0;
 }

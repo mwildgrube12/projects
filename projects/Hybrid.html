@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hodge</title>
+  <title>Hybrid</title>
   <script src="scripts.js"></script>
   <link rel="stylesheet" href="pagestyle.css" />
 </head>
@@ -38,7 +38,7 @@
 
 
 
-    <div class="header" style="background-image: url(images/flamey-end.jpg);">
+    <div class="header" style="background-image: url(images/some-hybrid-parts.jpg);">
         <h1>Hybrid Rocket Project</h1>
         <h2>The founding of Tufts' first engine project</h2>
     </div>
@@ -56,7 +56,7 @@
         <div class="right-img">
           <div class="photo">
             <a>
-            <img src="../images/hybrid.JPG" alt="The Rocket From Afar" width="600" height="600">
+            <img src="../images/hybrid.JPG" alt="Hybrid" width="600" height="600">
             </a>
             <div class="desc">CAD of the engine</div>
           </div>
@@ -64,13 +64,13 @@
         
         <h3>Project Overview</h3>
 
-        <p>*note: placeholder images and text</p>
-
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
-
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
+        <p>During my senior year, I founded the Hybrid Rocket Project. Despite a timeline of a year for a first engine draft, I wanted to start a project I dreamed about my freshman year and do as much as possible, following the philosophy of  “if I don’t start it, who will.” While my contributions were ultimately limited by this rushed timeline (most rocket teams take 2-3 years before an engine is tested), I was able to learn a lot by this process of cleansheeting an engine and able to mostly finish a machined engine by the end of the semester. </p>
         
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
+        <p>The project mission is to create a hybrid engine that, unlike many college teams, is more backed in simulation and prioritizes good engineering design over a “hobbyists” design. The engine is a hybrid engine, an alternate type of rocket engine to the more common liquid and solid motors. The engine uses a solid, paraffin wax, as the fuel, and a liquid, nitrous oxide, as the oxidizer. Many college teams ignore mixing and opt for a more ‘ease of use’ design with straight injectors and straight grains. Most hybrid rocketry research, however, suggests that swirl injectors and changes to the grains produce more efficient motors. This engine was designed to explore those designs.</p>        
+
+        <p>By the end of my tenure, we finished machining all but a select few parts necessary for scale testing of the engine, with a location in Odessa, TX to test fire in June of 2025. However, the overlap with the IREC competition and the quickly closing timeline forced me to call off tests for safety concerns and to allow for the engine to be finished in an unrushed fashion by new members when the semester resumed. I believe this offered a great experience to me, and I felt it was more valuable for the new team to finish it as I never had the chance to work on a project this complex as a freshman. It is planned to be tested in the early parts of the Fall 2025 semester.</p>
+
+        <div style="width: 100px;height: 50px;"></div>
 
         <div class="left-img">
           <div class="photo">
@@ -84,18 +84,13 @@
 
         <h3>Simulation Research</h3>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
-
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
+        <p>A hybrid rocket is a complex combination of lots of different coupled flow models. A combined model between flow, heat transfer diffusion, and chemical kinetics must be employed to solve it. For the flow model, a k-epsilon turbulent combustion model was used. This was chosen for its ability to converge better and faster than other models before scaling up. In addition, for the turbulent combustion modelling, the eddy dissipation model was used, since the reaction is driven by turbulence, not diffusion. This was coupled with the Arrhenius model for reaction rate to account for temperature effects. For diffusion, the Maxwell-Stefan model was used. Finally, a heat transfer model was used on top of a thermodynamics model to model the heat generation of the reaction</p>
         
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
+        <p>For this project, I began by verifying the simulation methods used. This was done by using a 2d rectangular geometry with a constant velocity inlet and using a reaction of CH4 + 2O2 -> CO2 + 2H2O. The inlet was modeled to have ⅔ O2 to make the reactants stoichiometrically balanced, with a velocity of 1 m/s. The bottom has an outlet set to a pressure of 0 psi, and the rest of the boundaries are slip walls. Then, a mesh with 47268 elements was used, and the model was solved to a relative error of 10-4. After running the simulations, the molar fluxes were used to verify the accuracy of the models.</p>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
+        <p>Tentatively, the results show that under fine enough mesh, these methods are viable for simulating a motor. While low mesh sizes have sharp corners and were found to have errors in the mol concentration lining up, finer meshes have less of these sharp corners and keep track of species much better, showing that at fine enough meshes with complex geometries these tentatively produce valid results.</p>
 
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
-        
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
-
+        <p>These results were seen as promising; however, due time constraints, I decided to give priority to designing and machining the motor in the second half of the year. Simulations using Hybrid Rocket Analysis Program, HRAP, were used to determine a grain measurement of 12in long, and research papers were used to guide design of pre and post combustion chambers. In my free time, I plan to continue my research and apply it to new software.</p>
 
         <h4 style="text-align: center;">Test Simulation Results</h4>
 
@@ -103,9 +98,9 @@
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/around_the_rocket.jpg" alt="Around the rocket" width="600" height="600">
+                  <img src="images/hybrid-sims/T.png" alt="temperature" width="600" height="600">
                   </a>
-                  <div class="desc">Preping the rocket for on-site inspection</div>
+                  <div class="desc">Temperature of the final verification simulation</div>
               </div>
           </div>
 
@@ -113,45 +108,45 @@
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/inspection_IREC.jpg" alt="inspection" width="600" height="600">
+                  <img src="images/hybrid-sims/vel.png" alt="velocity" width="600" height="600">
                   </a>
-                  <div class="desc">RSO Checks for the rocket at IREC</div>
+                  <div class="desc">Velocity of the final verification simulation</div>
               </div>
           </div>
 
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/me_in_the_car_with_rocket.jpg" alt="rocket in the car" width="600" height="600">
+                  <img src="images/hybrid-sims/conc.png" alt="conenctraion graph" width="600" height="600">
                   </a>
-                  <div class="desc">Bringing the rocket to the pads</div>
+                  <div class="desc">Concentrations of Mehtane burning in a tube</div>
               </div>
           </div>
 
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/the_truck.jpg" alt="the truck" width="600" height="600">
+                  <img src="images/hybrid-sims/conc2.png" alt="conenctraion graph" width="600" height="600">
                   </a>
-                  <div class="desc">Going to pick up the rocket</div>
+                  <div class="desc">Concetrations of Oxygen in the test sim</div>
               </div>
           </div>
 
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/me_with_recovered_rocket.jpg" alt="recovery" width="600" height="600">
+                  <img src="images/hybrid-sims/conc3.png" alt="recovery" width="600" height="600">
                   </a>
-                  <div class="desc">Bringing the rocket for recovery inspection</div>
+                  <div class="desc">Concetrations of Carbon Dioxie product</div>
               </div>
           </div>
 
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/av_bay_doors.jpg" alt="doors" width="600" height="600">
+                  <img src="images/hybrid-sims/conc4.png" alt="doors" width="600" height="600">
                   </a>
-                  <div class="desc">Open Avionics Bay Doors</div>
+                  <div class="desc">Concentrations of Water product</div>
               </div>
           </div>
 
@@ -161,49 +156,34 @@
         </div>
 
         
+        <h3>Saftey Considerations</h3>
+
+        <p>Before any design began, we started with an intensive review of hybrid safety. One of the reasons I chose hybrid for the engine style was the relative safety compared to solids; however, this does not mean this operation was without risks. To evaluate these risks, we complete risk analysis and a miniature “HAZOPs” to determine failure points before design. We did this to discover ways for the rocket to fail and so that we could plan ways to mitigate these risks. From these reviews, we decided where to put pressure safety valves, maximum operating pressures of various components, where to put check valves, and what electronic controls we wanted to implement.</p>
 
         <div style="height: 50px; width: 100%;"></div>
 
         <div class="right-img">
           <div class="photo">
             <a>
-            <img src="images/changes_to_avbay.jpg" alt="changes to the avbay" width="600" height="600">
+            <img src="images/boring_lathe.jpg" alt="changes to the avbay" width="600" height="600">
             </a>
-            <div class="desc">Differences in the Avionics Bay between the two rockets</div>
+            <div class="desc">Machining the combustion chamber</div>
           </div>
         </div>
 
-        <h3>Design and Fabrication</h3>
+        <h3>Design, as Project Manager</h3>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
+        <p>As the manager of this project, my first task was to decide how I was going to organize the members of the club brave enough to work on this ambitious project. To attempt to better organize the team, I divided the project into a number of informal subteams. The parts I devised were electrical, nitrous feeds, mechanical, and simulation. For each of these teams, I set goals based on our design meetings findings. For example, in the electrical team I set requirements on how many valves needed to be controlled, what range of pressures that needed to be controlled via the injector, and how the PID loops needed to be controlled. These requirements allowed people to design things more independently of each other, and allowed for individual parts to better mesh when it came time to integrate things.</p>
 
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
+        <h3>Design, as Cheif Engineer</h3>
+
+        <p>As the lead engineering brain behind this project, not only did I have to manage the people working on the project I had to lead the engineering of the project. I mainly left electrical to its own devices in its engineering, but due to lack of experienced personnel I was heavily involved in the mechanical design. The mechanical design of the feed tank and the combustion chamber was done from first principles: we designed the outer tubes to hold the hoop stress of 900psi to the 1.5 factor of safety, then all the other failure methods. I helped design the screws to hold their failure methods, and then checked the bulkheads and tank design with FEA to hold the pressures. These allowed us to be confident in our designs, and proceed with the fabrication.</p>
+
         
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
+        <h3>Fabrication</h3>
 
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
-        
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
-
-
-        <h3>Saftey Considerations</h3>
-
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
-
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
-        
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
-
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
-
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
-        
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
-
-
-
+        <p>After the design phase finished, I led the fabrication phase of the project. For this phase, I divided out parts responsibility to multiple members while having myself do what the others didn’t. As a team, we made engineering designs with dimensional tolerances, all of which I checked when complete. We sent out manufacturing for the nozzle, since it was graphite, but the rest we completed in house. Both manual mill and lathe were used to machine these parts, and dimensions were checked by calipers and integration when complete to do simple quality checks.</p>
 
         <div class="left-img">
           <div class="photo">
@@ -214,30 +194,25 @@
           </div>
         </div>
 
-
         <h3>Lessons learned</h3>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
+        <p>Unfortunately, fabrication was the last phase I saw through before my tenure at Tufts, and I handed off the reins after postponing the pressure tests and the test fire to early fall. This was due to a few people not finishing their parts and leaving it to a small group and safety concerns in rushing the engine to the finish. However, this did not prevent me from learning a lot from this project.</p>
 
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
+        <p>Organization-wise, I learned how much trust I can and need to put into other engineers to efficiently complete projects. I learned that allowing people to work relatively independently allows for greater efficiency in design phases and allows the design to progress faster. This allowed us to get as far as we did, and was a large part of our successes. However, I also learned that this can backfire, and you need to keep open communication to ensure it works.</p>
         
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
+        <p>The biggest mistake I made was spending too much time on safety analysis and starting design too late. I feel that, done concurrently, this project would have likely completed the test fire phase by the time I left. While safety is important, it must be done parallel to design to see maximum effectiveness; otherwise, it leads to unnecessary delays and time loss when things don’t work the way you thought. </p>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
+        <p>Overall, while I didn’t get to see it fire, I consider this project a success. I believe that the lessons I learned and the team that I built are far more valuable than watching the engine fire. While not testing it was disappointing, I was able to learn a lot, and am glad I started it. I may return to my work later, continuing my research as open-source simulation software.</p>
 
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
-        
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
-
-        <h4 style="text-align: center;">Launch, ect. Gallery</h4>
+        <h4 style="text-align: center;">Gallery</h4>
 
                 <div class="gallery-section">
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/around_the_rocket.jpg" alt="Around the rocket" width="600" height="600">
+                  <img src="images/other-hybird-part.jpg" alt="Around the rocket" width="600" height="600">
                   </a>
-                  <div class="desc">Preping the rocket for on-site inspection</div>
+                  <div class="desc"n>One of the Bulkheads for the rocket</div>
               </div>
           </div>
 
@@ -245,47 +220,30 @@
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/inspection_IREC.jpg" alt="inspection" width="600" height="600">
+                  <img src="images/a-hybrid-bulhead.jpg" alt="inspection" width="600" height="600">
                   </a>
-                  <div class="desc">RSO Checks for the rocket at IREC</div>
+                  <div class="desc">A different hybrid bulkhead</div>
               </div>
           </div>
 
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/me_in_the_car_with_rocket.jpg" alt="rocket in the car" width="600" height="600">
+                  <img src="images/nozzle-holder.jpg" alt="rocket in the car" width="600" height="600">
                   </a>
-                  <div class="desc">Bringing the rocket to the pads</div>
+                  <div class="desc">Finished Nozzle Holder</div>
               </div>
           </div>
 
           <div class="responsive">
               <div class="gallery">
                   <a>
-                  <img src="images/the_truck.jpg" alt="the truck" width="600" height="600">
+                  <img src="images/nozzleholderonlathe.jpg" alt="the truck" width="600" height="600">
                   </a>
-                  <div class="desc">Going to pick up the rocket</div>
+                  <div class="desc">Machining the nozzle holder taper</div>
               </div>
           </div>
 
-          <div class="responsive">
-              <div class="gallery">
-                  <a>
-                  <img src="images/me_with_recovered_rocket.jpg" alt="recovery" width="600" height="600">
-                  </a>
-                  <div class="desc">Bringing the rocket for recovery inspection</div>
-              </div>
-          </div>
-
-          <div class="responsive">
-              <div class="gallery">
-                  <a>
-                  <img src="images/av_bay_doors.jpg" alt="doors" width="600" height="600">
-                  </a>
-                  <div class="desc">Open Avionics Bay Doors</div>
-              </div>
-          </div>
 
           <div style="height: 50px; width: 100%;"></div>
 

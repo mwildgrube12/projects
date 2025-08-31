@@ -17,6 +17,7 @@ body {
     background-color: #007FFF;
     text-align: center;
     color: black;
+    font-family: Arial, sans-serif;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     text-shadow: 2px 2px black;
@@ -185,6 +186,7 @@ body {
     width: 80%;
     height: 50px;
     display: block;
+    text-align: center;
     transform: translate(10%,0);
 }
 

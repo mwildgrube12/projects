@@ -68,7 +68,7 @@
 
         <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
         
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
+        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data caused by rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
 
         <div class="left-img">
           <div class="photo">
@@ -83,7 +83,7 @@
 
         <p>This year, I lead the electronics team with the goal of miniaturizing our systems and reducing reliance on breakout boards. The architecture was based around an ESP32-WROOM. The sensors included a 9DOF IMU, a barometer for altitude sensing, a 200g accelerometer for launch acceleration, and a GPS for tracking. The first three were connected via I2C to the controller while the GPS was connected via serial. Data was scanned from these, run through Kalman filters, and used for state determinations before being sent over SPI to a SD card and over 433mHz LoRa for telemetry data. Additionally, these boards were designed to deploy ejection charges over 2 different channels.</p>
         
-        <p>Additionally, I managed two other concurrent electronics projects. I set requirements for both a motor temperature sensor board, with the goal of estimating motor performance, and a camera control board, with a goal of bettering camera control. These were handed off to other teams, and I regularly checked-in to ensure deadlines were met and progress was continuing.</p>
+        <p>Additionally, I managed two other concurrent electronics projects. I set requirements for both a motor temperature sensor board, with the goal of estimating motor performance, and a camera control board, with a goal of bettering camera control. These were handed off to other teams, and I regularly checked in to ensure deadlines were met and progress was continuing.</p>
        
         <p>I also designed additional, extra miniaturized boards. These boards, dubbed “Falafel,” used ESP32-C3 chips and only had the IMU and barometer from the main boards. However, these boards were only .7cm by 2 cm and could fit on much smaller areas, increasing our data collection area. While only being passive, they were designed to see differences in movement on different parts of the rocket.</p>
 
@@ -97,7 +97,7 @@
                   <a>
                   <img src="images/size_comparison_boards.jpg" alt="Compasion of th Boards" width="600" height="600">
                   </a>
-                  <div class="desc">Over 2 years, the boards have been minaturized</div>
+                  <div class="desc">Over 2 years, the boards have been miniaturized</div>
               </div>
           </div>
 
@@ -134,7 +134,7 @@
                   <a>
                   <img src="images/nosemu.jpg" alt="NoseMU" width="600" height="600">
                   </a>
-                  <div class="desc">A minaturized version dubed "Falafel" or "NosuMU"</div>
+                  <div class="desc">A miniaturized version dubbed "Falafel" or "NosuMU"</div>
               </div>
           </div>
 
@@ -163,10 +163,9 @@
 
         <h3>Serviceability Improvements</h3>
 
-        <p>**Placeholder Text**</p>
+        <p>In addition to improving the design of electronics, I also managed the improvement of the avionics bay design. One of the bigger lessons we had learned from the Carm design was the importance of thinking about integration early and thinking about part assembly and serviceability in case something went wrong. This year, we created cross-functional teams on the parts we had struggled with when integrated from the start, and implemented better requirements to make these areas function better.</p>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
-
+        <p>For the avionics bay, the main changes we implemented were to add features to allow the batteries and SD cards to be switched out without taking the rocket apart and to create an avionics bay that was easier to assemble and reassemble if things didn’t go to plan. These were both responses to issues that we had encountered in the previous year, and felt them important to implement. The end result was a streamlined avionics bay, and “hatches” that allowed for access to inside while waiting for the pad, or between weather scrub attempts to replace batteries.</p>
 
         <div class="left-img">
           <div class="photo">
@@ -180,21 +179,19 @@
 
         <h3>Lessons learned</h3>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
+        <p>Like the previous year, despite lots of success there were a lot of lessons to be learned. As usual, a lot of technical skills were learned, especially with regards to the electronics; however, far more intangible lessons were learned in this project. The successes were intertwined with overcoming setback after setback, and was very valuable to future projects.</p>
 
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
+        <p>Perhaps the biggest lesson I learned was the efficacy of fast iteration. For the electronics program, I organized a team, developed a v1, and ordered it within the first month of the semester, and was able to start testing it much faster than in previous years. This ambitious goal setting and quick-moving engineering allowed us to get a much better idea of potential faults in the board, electrically, much quicker, and allowed us to learn how to design electronics much faster. </p>
         
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
+        <p>On the flip side of this, I also learned the importance of setting requirements before a project starts, something I did not do. Later down the line, we had many issues where we had forgotten a part or had issues with thermal regulation because we didn’t consider those from the start as we should have. I feel that if I had sat down for 2 hours before the project started just before this push to write down potential faults and ways to avert them, I would have saved a lot of testing time down the line.</p>
 
-        <p>I led the 2024-2025 IREC entry by Tufts University, dubbed “Hodge,” as both project co-lead and electrical team lead. This was our second year competing in the 10k ft COTS category and second year overall. The mission of this project was to improve our rocket from the previous entry and improve its engineering quality by setting stricter requirements and factors of safety and by using human-factors principles to improve its serviceability.</p>
-
-        <p>As the project co-lead, I aided in setting new requirements and goals for the new rocket. These included setting new human factors requirements like accessible components in the avionics bay. As Electrical lead, I organized a sub-team of around 10 members into smaller projects such as a motor temperature monitor team and a ground station team, and set requirements and goals for these teams. I additionally directly lead the design of the main flight computer, contributing directly to its design decisions.</p>
+        <p>From a human side, I learned very well the power of delegation. During this project, there were many parts I wanted to hand off and delegate from the beginning, and there were parts I only delegated after I felt I had no bandwidth to deal with them. However, in almost all the cases, delegation and trusting teammates to follow requirements proved a lot more effective than not. While it sometimes is hard to “let go” of parts you want to engineer yourself, it is a lot more beneficial to the final product for you to take a managerial role and have a hands off approach to subprojects.</p>
         
-        <p>Overall, the project ended with the rocket successfully launching at competition, with full recovery points. We had no faults in airframe and recovery systems; however, due to insufficient test data due to rain delays for 13 weekends straight, on-pad thermal issues caused much of the data collection systems to fail and we were only able to collect data off COTS systems. These COTS systems revealed we reached an altitude of 10203 feet, only 203 feet off target.</p>
+        <p>These are just the biggest lessons that I took away from this project, and each day working on it taught me a lot of smaller lessons. I feel that, overall, my involvement in this project allowed me to grow a lot as both an engineer and as a human, and that I am better off after it.</p>
 
         <h4 style="text-align: center;">Launch, ect. Gallery</h4>
 
-                <div class="gallery-section">
+        <div class="gallery-section">
           <div class="responsive">
               <div class="gallery">
                   <a>
